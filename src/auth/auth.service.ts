@@ -75,6 +75,13 @@ export class AuthService {
     };
   }
 
+  checkAuthStatus(user: User) {
+    return {
+      ...user,
+      token: this.getJwt({ id: user.id }),
+    };
+  }
+
   update(id: number, updateUserDto: UpdateUserDto) {
     return `This action updates a #${id} auth ${updateUserDto.email}`;
   }
