@@ -39,3 +39,29 @@ http://localhost:3000/api/seed
 # development
 npm run start:dev
 ```
+
+## Production build docker
+
+1. Create .env.prod file
+
+2. Create a Dockerfile file
+
+3. Create docker-compose.prod.yml file
+
+4. Build the image
+
+```bash
+docker commpose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+5. Run the container
+
+```bash
+docker commpose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
+
+6. Stop the container
+
+```bash
+docker commpose -f docker-compose.prod.yaml --env-file .env.prod down
+```
