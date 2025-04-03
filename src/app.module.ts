@@ -22,6 +22,9 @@ import { join } from 'path';
       database: process.env.DB_NAME,
       autoLoadEntities: true,
       synchronize: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     }),
     ProductsModule,
     CommonModule,
